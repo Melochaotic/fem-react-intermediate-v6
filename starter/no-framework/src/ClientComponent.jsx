@@ -4,13 +4,13 @@ import { useState } from "react";
 
 export default function ClientComponent() {
   console.log("Rendering Client Component");
-  const { counter, setCounter } = useState(0);
+  const [counter, setCounter] = useState(0);
 
   return (
     <fieldset>
       <legend>Client component</legend>
       <p>Counter {counter}</p>
-      <button onClick={() => setCounter(counter++)}>Increment</button>
+      <button onClick={() => setCounter(counter + 1)}>Increment</button>
     </fieldset>
   );
 }
